@@ -8,8 +8,9 @@ class Peer {
    private $Protocol;
    private $ConnectTime;
    private $LastHeardTime;
+   private $DMRID;
    
-   public function __construct($Callsign, $IP, $LinkedModule, $Protocol, $ConnectTime, $LastHeardTime) {
+   public function __construct($Callsign, $IP, $LinkedModule, $Protocol, $ConnectTime, $LastHeardTime, $DMRID) {
       
       $this->IP            = $IP;
       $this->Protocol      = $Protocol;
@@ -17,6 +18,7 @@ class Peer {
       $this->LastHeardTime = ParseTime($LastHeardTime);
       $this->Callsign      = trim($Callsign);      
       $this->LinkedModule  = trim($LinkedModule);
+      $this->DMRID         = $DMRID;
    }
    
 
@@ -26,6 +28,7 @@ class Peer {
    public function GetProtocol()             { return $this->Protocol;       }
    public function GetConnectTime()          { return $this->ConnectTime;    }
    public function GetLastHeardTime()        { return $this->LastHeardTime;  }
+   public function GetDMRID()                { return $this->DMRID;          }
    
 }
 
