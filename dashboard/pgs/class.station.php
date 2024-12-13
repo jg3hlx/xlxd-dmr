@@ -9,6 +9,7 @@ class Station {
    private $CallsignOnly;
    private $Peer;
    private $OnModule;
+   private $DMRID;
       
    public function __construct($Callsign, $Via, $Peer, $LastHeardTime, $OnModule) {
       $this->Callsign      = trim($Callsign);
@@ -34,6 +35,7 @@ class Station {
    public function GetSuffix()               { return $this->Suffix;         }
    public function GetCallsignOnly()         { return $this->CallsignOnly;   }
    public function GetModule()               { return $this->OnModule;       }
+   public function GetDMRID()                { return $this->DMRID;          }
    
 }
 
