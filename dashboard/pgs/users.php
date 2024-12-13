@@ -141,14 +141,14 @@ for ($i=0;$i<$Reflector->StationCount();$i++) {
       }
       echo '</td>
    <td width="75"><a href="https://www.qrz.com/db/'.$Reflector->Stations[$i]->GetCallsignOnly().'" class="pl" target="_blank">'.$Reflector->Stations[$i]->GetCallsignOnly().'</a></td>
-   <td width="60">'.$Reflector->Stations[$i]->GetSuffix().'</td>
+   <td width="60">'.$Reflector->Stations[$i]->GetSuffix().$Reflector->Stations[$i]->GetDMRID().'</td>
    <td width="50" align="center"><a href="http://www.aprs.fi/'.$Reflector->Stations[$i]->GetCallsignOnly().'" class="pl" target="_blank"><img src="./img/sat.png" /></a></td>
    <td width="150">'.$Reflector->Stations[$i]->GetVia();
       if ($Reflector->Stations[$i]->GetPeer() != $Reflector->GetReflectorName()) {
          echo ' / '.$Reflector->Stations[$i]->GetPeer();
       }
       echo '</td>
-   <td width="150">'.@date("d.m.Y H:i", $Reflector->Stations[$i]->GetLastHeardTime()).'</td>
+   <td width="150">'.@date("Y.m.d H:i", $Reflector->Stations[$i]->GetLastHeardTime()).'</td>
    <td align="center" width="30">'.$Reflector->Stations[$i]->GetModule().'</td>
  </tr>';
    }
