@@ -6,6 +6,14 @@ The XLX Multiprotocol Gateway Reflector Server is part of the software system
 for the D-Star Network.
 The sources are published under GPL Licenses.
 
+
+# DMRの強化
+
+  - XLXDで使用するホワイトリストによる接続制限
+  - DMRIDにSSIDがついていても接続可能
+  - ダッシュボードにDMRIDを表示
+  - 他
+    
 # Supported Protocols since XLX v2.5.x
 
 - In D-Star, Icom-G3Terminal, DExtra, DPLus and DCS
