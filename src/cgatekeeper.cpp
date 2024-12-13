@@ -101,11 +101,13 @@ bool CGateKeeper::MayLink(const CCallsign &callsign, const CIp &ip, int protocol
         case PROTOCOL_DCS:
         case PROTOCOL_DMRPLUS:
         case PROTOCOL_DMRMMDVM:
+            ok &= IsNodeListedOk(callsign, ip);
         case PROTOCOL_YSF:
         case PROTOCOL_G3:
         case PROTOCOL_IMRS:
             // first check is IP & callsigned listed OK
             ok &= IsNodeListedOk(callsign, ip);
+            break;
             // todo: then apply any protocol specific authorisation for the operation
             break;
             
