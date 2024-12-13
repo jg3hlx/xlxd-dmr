@@ -10,6 +10,8 @@ The sources are published under GPL Licenses.
 # DMRの強化
 
   - XLXDで使用するホワイトリストによる接続制限
+    
+    JA用のサンプル有
   - DMRIDにSSIDがついていても接続可能
   - ダッシュボードにDMRIDを表示
   - 他
