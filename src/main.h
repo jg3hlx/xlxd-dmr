@@ -51,6 +51,7 @@
 #define VERSION_MAJOR                   2
 #define VERSION_MINOR                   5
 #define VERSION_REVISION                3
+#define VERSION_BUILD                  "DMR"
 
 // global ------------------------------------------------------
 
@@ -65,8 +66,8 @@
 
 // reflector ---------------------------------------------------
 
-#define NB_OF_MODULES                   10
-//#define NB_OF_MODULES                   NB_MODULES_MAX
+//#define NB_OF_MODULES                   10
+#define NB_OF_MODULES                   NB_MODULES_MAX
 
 // protocols ---------------------------------------------------
 
