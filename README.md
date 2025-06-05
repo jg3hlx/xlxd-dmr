@@ -8,7 +8,7 @@ for the D-Star Network.
 The sources are published under GPL Licenses.
 
 
-# DMRの強化
+# DMR接続時の機能改善
 
   - XLXDで使用するホワイトリストによる接続制限
     
