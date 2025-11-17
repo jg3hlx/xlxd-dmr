@@ -17,7 +17,11 @@ $VNStat      = array();
 
 $PageOptions['ContactEmail']                         = 'your_email';	// Support E-Mail address
 
+<<<<<<< HEAD:dashboard/pgs/config.inc.php
 $PageOptions['DashboardVersion']                     = '2.4.2(DMR)';		// Dashboard Version
+=======
+$PageOptions['DashboardVersion']                     = '2.4.3';		// Dashboard Version
+>>>>>>> upstream/master:dashboard1/pgs/config.inc.php
 
 $PageOptions['PageRefreshActive']                    = true;		// Activate automatic refresh
 $PageOptions['PageRefreshDelay']                     = '10000';		// Page refresh time in miliseconds
@@ -77,9 +81,8 @@ $VNStat['Binary']                                    = '/usr/bin/vnstat';
 include an extra config file for people who dont like to mess with shipped config.ing.php   
 this makes updating dashboard from git a little bit easier   
 */   
- 
 if (file_exists("../config.inc.php")) {   
- include ("../config.inc.php");  
-}   
+    include ("../config.inc.php");  
+}
 
 ?>
