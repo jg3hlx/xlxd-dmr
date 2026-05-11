@@ -121,7 +121,7 @@ if ($PageOptions['UserPage']['ShowFilter']) {
    <th width="25">#</th>
    <th width="60">Flag</th>
    <th width="100">DV Station</th>
-   <th width="75">Band</th>
+   <th width="75">Band or DMRID</th>
    <th width="150">Last Heard</th>
    <th width="150">Linked for</th>
    <th width="90">Protocol</th>
