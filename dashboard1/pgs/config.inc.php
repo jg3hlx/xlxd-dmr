@@ -17,11 +17,7 @@ $VNStat      = array();
 
 $PageOptions['ContactEmail']                         = 'your_email';	// Support E-Mail address
 
-<<<<<<< HEAD:dashboard/pgs/config.inc.php
 $PageOptions['DashboardVersion']                     = '2.4.2(DMR)';		// Dashboard Version
-=======
-$PageOptions['DashboardVersion']                     = '2.4.3';		// Dashboard Version
->>>>>>> upstream/master:dashboard1/pgs/config.inc.php
 
 $PageOptions['PageRefreshActive']                    = true;		// Activate automatic refresh
 $PageOptions['PageRefreshDelay']                     = '10000';		// Page refresh time in miliseconds
