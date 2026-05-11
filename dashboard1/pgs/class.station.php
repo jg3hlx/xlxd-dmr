@@ -48,7 +48,7 @@ class Station {
    public function GetSuffix()               { return $this->Suffix;         }
    public function GetCallsignOnly()         { return $this->CallsignOnly;   }
    public function GetModule()               { return $this->OnModule;       }
-   
+   public function GetDMRID()                { return $this->DMRID;          }     
 }
 
 ?>
