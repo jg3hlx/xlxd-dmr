@@ -92,7 +92,7 @@ class xReflector {
          
          $this->Version = $XML->GetElement($this->XMLContent, "Version");   
       }
-   }
+   
    
    public function GetVersion() {
       return $this->Version;
