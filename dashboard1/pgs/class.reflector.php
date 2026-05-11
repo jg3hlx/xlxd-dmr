@@ -51,7 +51,6 @@ class xReflector {
             return false;
         }
 
-<<<<<<< HEAD:dashboard/pgs/class.reflector.php
          $this->ReflectorName = "XLX".$this->ServiceName;
          
          $LinkedPeersName = "XLX".$this->ServiceName."  linked peers";
@@ -84,61 +83,6 @@ class xReflector {
          
          $this->Version = $XML->GetElement($this->XMLContent, "Version");   
       }
-=======
-        $this->ReflectorName = "XLX".$this->ServiceName;
-        
-        $LinkedPeersName = "XLX".$this->ServiceName."  linked peers";
-        $LinkedNodesName = "XLX".$this->ServiceName."  linked nodes";
-        $LinkedUsersName = "XLX".$this->ServiceName."  heard users";
-        
-        $XML = new ParseXML();
-        
-        $AllNodesString = $XML->GetElement($this->XMLContent, $LinkedNodesName);
-        $tmpNodes = $XML->GetAllElements($AllNodesString, "NODE");
-        
-        for ($i=0;$i<count($tmpNodes);$i++) {
-            $Node = new Node(
-                $XML->GetElement($tmpNodes[$i], 'Callsign'), 
-                $XML->GetElement($tmpNodes[$i], 'IP'), 
-                $XML->GetElement($tmpNodes[$i], 'LinkedModule'), 
-                $XML->GetElement($tmpNodes[$i], 'Protocol'), 
-                $XML->GetElement($tmpNodes[$i], 'ConnectTime'), 
-                $XML->GetElement($tmpNodes[$i], 'LastHeardTime'), 
-                CreateCode(16)
-            );
-            $this->AddNode($Node);
-        }
-        
-        $AllStationsString = $XML->GetElement($this->XMLContent, $LinkedUsersName);
-        $tmpStations = $XML->GetAllElements($AllStationsString, "STATION");
-        for ($i=0;$i<count($tmpStations);$i++) {
-            $Station = new Station(
-                $XML->GetElement($tmpStations[$i], 'Callsign'), 
-                $XML->GetElement($tmpStations[$i], 'Via node'), 
-                $XML->GetElement($tmpStations[$i], 'Via peer'), 
-                $XML->GetElement($tmpStations[$i], 'LastHeardTime'), 
-                $XML->GetElement($tmpStations[$i], 'On module')
-            );
-            $this->AddStation($Station, false);
-        }
-        
-        $AllPeersString = $XML->GetElement($this->XMLContent, $LinkedPeersName);
-        $tmpPeers = $XML->GetAllElements($AllPeersString, "PEER");
-        for ($i=0;$i<count($tmpPeers);$i++) {
-            $Peer = new Peer(
-                $XML->GetElement($tmpPeers[$i], 'Callsign'), 
-                $XML->GetElement($tmpPeers[$i], 'IP'), 
-                $XML->GetElement($tmpPeers[$i], 'LinkedModule'), 
-                $XML->GetElement($tmpPeers[$i], 'Protocol'), 
-                $XML->GetElement($tmpPeers[$i], 'ConnectTime'), 
-                $XML->GetElement($tmpPeers[$i], 'LastHeardTime')
-            );
-            $this->AddPeer($Peer, false);
-        }
-        
-        $this->Version = strip_tags($XML->GetElement($this->XMLContent, "Version"));
-    }
->>>>>>> upstream/master:dashboard1/pgs/class.reflector.php
    }
    
    public function GetVersion() {
