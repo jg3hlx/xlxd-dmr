@@ -129,7 +129,6 @@ for ($i=0;$i<$Reflector->StationCount();$i++) {
    if ($ShowThisStation) {   
       if ($odd == "#FFFFFF") { $odd = "#F1FAFA"; } else { $odd = "#FFFFFF"; }
       echo '
-<<<<<<< HEAD:dashboard/pgs/users.php
   <tr height="30" bgcolor="'.$odd.'" onMouseOver="this.bgColor=\'#FFFFCA\';" onMouseOut="this.bgColor=\''.$odd.'\';">
    <td align="center" valign="middle" width="35">';
       if ($i==0 && $Reflector->Stations[$i]->GetLastHeardTime() > (time() - 60)) {
