@@ -44,13 +44,14 @@ for ($i=0;$i<$Reflector->NodeCount();$i++) {
    }
    else {
       switch ($Reflector->Nodes[$i]->GetSuffix()) {
-         case 'A' : echo '23cm'; break;
-         case 'B' : echo '70cm'; break;
-         case 'C' : echo '2m'; break;
-         case 'D' : echo 'Dongle'; break;
-         case 'G' : echo 'Internet-Gateway'; break;
-         default  : echo '';
-      }
+            case 'A' : echo '1200GHz'; break;
+            case 'B' : echo '430MHz'; break;
+            case 'C' : echo '144MHz'; break;
+            case 'D' : echo 'Dongle'; break;
+            case 'G' : echo 'Internet-Gateway'; break;
+            case 'M' : echo $Reflector->Nodes[$i]->GetDMRID(); break;
+            case 'P' : echo 'Pi-Star-NODE'; break;
+            default  : echo ''      }
    }
    echo '</td>
    <td>'.date("d.m.Y H:i", $Reflector->Nodes[$i]->GetLastHeardTime()).'</td>
