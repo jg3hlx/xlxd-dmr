@@ -64,7 +64,7 @@ class Node {
    public function GetSuffix()               { return $this->Suffix;         }
    public function GetPrefix()               { return $this->Prefix;         }
    public function GetRandomID()             { return $this->RandomID;       }
-   
+   public function GetDMRID()                { return $this->DMRID;          }   
 }
 
 ?>
