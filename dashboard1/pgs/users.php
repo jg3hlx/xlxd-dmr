@@ -158,36 +158,6 @@ for ($i=0;$i<$Reflector->StationCount();$i++) {
    <td width="150">'.@date("Y.m.d H:i", $Reflector->Stations[$i]->GetLastHeardTime()).'</td>
    <td align="center" width="30">'.$Reflector->Stations[$i]->GetModule().'</td>
  </tr>';
-=======
-      <tr height="30" bgcolor="'.$odd.'" onMouseOver="this.bgColor=\'#FFFFCA\';" onMouseOut="this.bgColor=\''.$odd.'\';">
-         <td align="center" valign="middle" width="35">';
-            if ($i==0 && $Reflector->Stations[$i]->GetLastHeardTime() > (time() - 60)) {
-               echo '<img src="./img/tx.gif" style="margin-top:3px;" height="20"/>';
-            }
-            else {
-               echo ($i+1);
-            }
-         
-         echo '</td>
-         <td align="center" width="60">';
-         
-            list ($Flag, $Name) = $Reflector->GetFlag($Reflector->Stations[$i]->GetCallSign());
-            if (file_exists("./img/flags/".$Flag.".png")) {
-               echo '<a href="#" class="tip"><img src="./img/flags/'.sanitize_attribute($Flag).'.png" height="15" alt="'.sanitize_attribute($Name).'" /><span>'.sanitize_output($Name).'</span></a>';
-            }
-            echo '</td>
-         <td width="75"><a href="https://www.qrz.com/db/'.sanitize_attribute($Reflector->Stations[$i]->GetCallsignOnly()).'" class="pl" target="_blank">'.sanitize_output($Reflector->Stations[$i]->GetCallsignOnly()).'</a></td>
-         <td width="60">'.sanitize_output($Reflector->Stations[$i]->GetSuffix()).'</td>
-         <td width="50" align="center"><a href="http://www.aprs.fi/'.sanitize_attribute($Reflector->Stations[$i]->GetCallsignOnly()).'" class="pl" target="_blank"><img src="./img/sat.png" /></a></td>
-         <td width="150">'.sanitize_output($Reflector->Stations[$i]->GetVia());
-            if ($Reflector->Stations[$i]->GetPeer() != $Reflector->GetReflectorName()) {
-               echo ' / '.sanitize_output($Reflector->Stations[$i]->GetPeer());
-            }
-            echo '</td>
-         <td width="150">'.sanitize_output(@date("d.m.Y H:i", $Reflector->Stations[$i]->GetLastHeardTime())).'</td>
-         <td align="center" width="30">'.sanitize_output($Reflector->Stations[$i]->GetModule()).'</td>
-      </tr>';
->>>>>>> upstream/master:dashboard1/pgs/users.php
    }
    if ($i == $PageOptions['LastHeardPage']['LimitTo']) { $i = $Reflector->StationCount()+1; }
 }
