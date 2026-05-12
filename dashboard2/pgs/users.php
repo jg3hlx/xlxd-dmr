@@ -158,7 +158,7 @@ for ($i=0;$i<$Reflector->StationCount();$i++) {
             echo ' / ' . SafeOutput($Reflector->Stations[$i]->GetPeer());
         }
         echo '</td>
-   <td>' . @date("d.m.Y H:i", $Reflector->Stations[$i]->GetLastHeardTime()) . '</td>
+   <td>' . @date("Y.m.d H:i", $Reflector->Stations[$i]->GetLastHeardTime()) . '</td>
    <td>' . SafeOutput($Reflector->Stations[$i]->GetModule()) . '</td>
  </tr>';
     }
