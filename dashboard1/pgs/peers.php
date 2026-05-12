@@ -60,17 +60,10 @@ for ($i=0;$i<$Reflector->PeerCount();$i++) {
    <td>'.sanitize_output($Name).'</td>';
    }
    echo '
-<<<<<<< HEAD:dashboard/pgs/peers.php
    <td>'.date("Y.m.d H:i", $Reflector->Peers[$i]->GetLastHeardTime()).'</td>
    <td>'.FormatSeconds(time()-$Reflector->Peers[$i]->GetConnectTime()).' s</td>
    <td align="center">'.$Reflector->Peers[$i]->GetProtocol().'</td>
    <td align="center">'.$Reflector->Peers[$i]->GetLinkedModule().'</td>';
-=======
-   <td>'.sanitize_output(date("d.m.Y H:i", $Reflector->Peers[$i]->GetLastHeardTime())).'</td>
-   <td>'.sanitize_output(FormatSeconds(time()-$Reflector->Peers[$i]->GetConnectTime())).' s</td>
-   <td align="center">'.sanitize_output($Reflector->Peers[$i]->GetProtocol()).'</td>
-   <td align="center">'.sanitize_output($Reflector->Peers[$i]->GetLinkedModule()).'</td>';
->>>>>>> upstream/master:dashboard1/pgs/peers.php
    if ($PageOptions['PeerPage']['IPModus'] != 'HideIP') {
     echo '
     <td>';
