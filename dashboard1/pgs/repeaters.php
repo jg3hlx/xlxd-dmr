@@ -201,7 +201,7 @@ for ($i=0;$i<$Reflector->NodeCount();$i++) {
          }
       }
       echo '</td>
-      <td>'.sanitize_output(date("d.m.Y H:i", $Reflector->Nodes[$i]->GetLastHeardTime())).'</td>
+      <td>'.sanitize_output(date("Y.m.d H:i", $Reflector->Nodes[$i]->GetLastHeardTime())).'</td>
       <td>'.sanitize_output(FormatSeconds(time()-$Reflector->Nodes[$i]->GetConnectTime())).' s</td>
       <td>'.sanitize_output($Reflector->Nodes[$i]->GetProtocol()).'</td>
       <td align="center">'.sanitize_output($Reflector->Nodes[$i]->GetLinkedModule()).'</td>';
