@@ -55,7 +55,7 @@ for ($i=0;$i<$Reflector->NodeCount();$i++) {
       }
    }
    echo '</td>
-   <td>'.date("d.m.Y H:i", $Reflector->Nodes[$i]->GetLastHeardTime()).'</td>
+   <td>'.date("Y.m.d H:i", $Reflector->Nodes[$i]->GetLastHeardTime()).'</td>
    <td>'.FormatSeconds(time()-$Reflector->Nodes[$i]->GetConnectTime()).' s</td>
    <td>'.SafeOutput($Reflector->Nodes[$i]->GetProtocol()).'</td>
    <td>'.SafeOutput($Reflector->Nodes[$i]->GetLinkedModule()).'</td>';
