@@ -51,7 +51,8 @@ for ($i=0;$i<$Reflector->NodeCount();$i++) {
             case 'G' : echo 'Internet-Gateway'; break;
             case 'M' : echo $Reflector->Nodes[$i]->GetDMRID(); break;
             case 'P' : echo 'Pi-Star-NODE'; break;
-            default  : echo ''      }
+            default  : echo '';
+      }
    }
    echo '</td>
    <td>'.date("d.m.Y H:i", $Reflector->Nodes[$i]->GetLastHeardTime()).'</td>
