@@ -95,7 +95,7 @@ int main(int argc, const char * argv[])
         return 1;
     }
 
-    // splash HLX
+    // splash
     std::cout << "Starting xlxd " << VERSION_MAJOR << "." << VERSION_MINOR << "." << VERSION_REVISION << "." << VERSION_BUILD << std::endl << std::endl;
 
     // initialize reflector

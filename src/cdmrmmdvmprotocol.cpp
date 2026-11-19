@@ -247,7 +247,7 @@ void CDmrmmdvmProtocol::Task(void)
             EncodeAckPacket(&Buffer, Callsign);
             m_Socket.Send(Buffer, Ip);
         }
-        else if ( Buffer.size() != 55) 
+        else if ( Buffer.size() != 55 )
         {
             // Log unknown packet with details based on DMRplus IPSC Protocol spec
             std::cout << "DMRmmdvm unknown packet (" << Buffer.size() << " bytes) from " << Ip;

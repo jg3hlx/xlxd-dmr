@@ -46,7 +46,7 @@
 #define VERSION_MAJOR                   2
 #define VERSION_MINOR                   6
 #define VERSION_REVISION                0
-#define VERSION_BUILD                  "DMR" // hlx
+#define VERSION_BUILD                  "DMR"
 
 // global ------------------------------------------------------
 #define RUN_AS_DAEMON
@@ -77,8 +77,8 @@ static_assert(DSCP_VALUE >= 0 && DSCP_VALUE <= 63,
 //#define DEBUG_NO_G3_ICMP_SOCKET
 
 // reflector ---------------------------------------------------
-// #define NB_OF_MODULES                   10
-#define NB_OF_MODULES                   NB_MODULES_MAX
+#define NB_OF_MODULES                   26
+//#define NB_OF_MODULES                   NB_MODULES_MAX
 
 // security ----------------------------------------------------
 #define MAX_REJECT_TRACKERS             4096                                // max tracked IPs for progressive ignore
@@ -153,7 +153,7 @@ static_assert(DSCP_VALUE >= 0 && DSCP_VALUE <= 63,
 #define YSF_KEEPALIVE_TIMEOUT           (YSF_KEEPALIVE_PERIOD*10)           // in seconds
 #define YSF_DEFAULT_NODE_TX_FREQ        437000000                           // in Hz
 #define YSF_DEFAULT_NODE_RX_FREQ        437000000                           // in Hz
-#define YSF_AUTOLINK_ENABLE             0                                   // 1 = enable, 0 = disable auto-link
+#define YSF_AUTOLINK_ENABLE             1                                   // 1 = enable, 0 = disable auto-link
 #define YSF_AUTOLINK_MODULE             'B'                                 // module for client to auto-link to
 
 // YSF Reflector Peering
