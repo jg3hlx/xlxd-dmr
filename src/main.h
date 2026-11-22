@@ -46,7 +46,7 @@
 #define VERSION_MAJOR                   2
 #define VERSION_MINOR                   6
 #define VERSION_REVISION                0
-#define VERSION_BUILD                  "HLX"
+#define VERSION_BUILD                  "DMRID"
 
 // global ------------------------------------------------------
 #define RUN_AS_DAEMON
